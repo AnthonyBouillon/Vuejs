@@ -31,7 +31,8 @@ class Users extends CI_Controller {
   public function add(){
     $data = array(
       'name' => $_POST['name'],
-      'firstname' => $_POST['firstname']
+      'firstname' => $_POST['firstname'],
+      'email' => $_POST['email']
     );
     $this->users_model->add_user($data);
   }
@@ -40,6 +41,7 @@ class Users extends CI_Controller {
     $data = array (
       'name' => $_POST['name'],
       'firstname' => $_POST['firstname']
+
     );
     $this->users_model->update_user($data, $_POST['id']);
   }
